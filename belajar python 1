@@ -1,0 +1,28 @@
+import random 
+
+welcome = "Welcome to The Game Nocxx"
+posisi = random.randint(1,10)
+
+print("=========================")
+print(welcome.upper())
+print("=========================")
+start= 0
+end=10
+user=input("silahkan masukan namamu:")
+print("kamu punya kesempatan sebanyak" + str(end))
+
+print(f'''Hallo {user}!! Coba liat goa dibawah ini 
+[1] [2] [3] [4] [5] [6] [7] [8] [9] [10]
+''')
+
+A_user=int(input("menurutmu dimana sang raja? "))
+konfirmasi=input(f"apakah kamu yakin dengan {A_user}? [Yes/No]")
+if konfirmasi == "Yes":
+    while(start<end):
+        if A_user == posisi :
+            print(f"selamat pilihan {A_user}, karena sang raja berada di {posisi}")
+            exit(0)
+        else:
+            start+=1
+else:
+    print("terima kasih sudah berkunjung")
